@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>truss</title>
+  <head>
+        <link rel="stylesheet" href="css/style.css">
+       <link rel="stylesheet" href="css/style.css">
+       <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+
+<body>
+<div class="topnav fontfam">
+  <a href="index.html">Back to home</a>
+  <a href="signup.html">register</a>
+  <a href="login.html">login</a>
+
+</div>
+
+<section>
+<div class="container">
+  <div class="row"></div>
+
+          <div id="signup-box">
+            <center>
+            <h1 style="color: red">Sign up</h1>
+            <form name="signupform">
+            
+            <input type="text" name="username" placeholder="Username" id="username" />
+            <p id=p_username style="font-size: 15px;color:red"></p>
+            
+            <input type="text" name="email" placeholder="E-mail" />
+            <p id=email style="font-size: 15px;color:red"></p>
+            <input type="password" name="password" placeholder="Password" id="password"/>
+            <input type="password" name="password2" placeholder="Retype password" id="password2"/>
+            <p id=pass2 style="font-size: 15px;color:red""></p>
+            <input type="button" onclick="submitFunction()" name="signup_submit" value="Register"/>
+            </center>
+
+          </div>
+
+    </div>
+  </section>
+
+  <script>
+          function submitFunction()
+          {
+            var x=document.forms["signupform"]["email"].value;
+            var atpos = x.indexOf("@");
+            var dotpos = x.lastIndexOf(".");
+            var pass = document.signupform.password.value;
+            var pass2 = document.signupform.password2.value;
+            var uname = document.signupform.username.value;
+
+             /*if(uname ==null || uname="")
+              {
+                 document.getElementById("p_username").innerHTML = "Username can't be blank";
+                 return false;
+              }*/
+
+              if(uname==null||uname=="")
+            {
+             document.getElementById("p_username").innerHTML = "Fields can't be empty";
+
+            }
+          else
+          {
+             if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+             {
+                 document.getElementById("email").innerHTML = "enter valid email";
+                 return false;
+              }
+
+              else if(pass==null||pass=="")
+              {
+                document.getElementById("pass").innerHTML = "Password can't br empty";
+                return false;
+              }
+
+              else if(pass != pass2)
+              {
+                document.getElementById("pass2").innerHTML = "Password doesn't match";
+                return false;
+              }
+              else
+              {
+                var text="hello "+ uname +"\npassword is "+pass2;
+                alert(text);
+                return false;
+              }
+             } 
+          }
+
+    
+        </script>
+
+</body>
+</html>

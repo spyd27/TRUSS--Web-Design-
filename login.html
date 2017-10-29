@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Login form</title>
+      
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.css">
+       <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+ <script type="text/javascript" scr="js.test.js"/></script>
+  <!--
+  <script>
+    function submitFunction()
+    {
+      var x=document.forms["loginform"]["username"].value;
+      var y=document.forms["loginform"]["password"].value;
+
+      if(x==null||x==""||y==null||y=="")
+      {
+        document.getElementById('uname').innerHTML="Username can't be blank"
+      }
+      else
+      {
+        if(x=="royal")
+        {
+          if(y=="123")
+          {
+            alert("Successful Login");
+          }
+          else
+          {
+            document.getElementById('pass').innerHTML="Enter correct Password";
+          }
+          /*
+          $.ajax(
+          {
+              type: "POST",
+              url: "server.php",
+              data: {
+                username: x,
+                password: y
+              }
+              success: function(result){
+                alert(result);
+              }
+          });
+        }
+           else
+          {
+           document.getElementById('user').innerHTML="User doesn't exist";
+          
+          }*/
+        }
+      }
+    
+
+  </script>
+  -->
+</head>
+
+
+
+
+<body>
+<div class="topnav fontfam">
+  <a href="index.html">Back to home</a>
+  
+  <a href="signup.html">Register</a>
+  <a href="login.html">Login</a>
+
+</div>
+
+<section>
+<div class="container">
+<div class="row">
+  
+</div>
+
+  <div id="login-box">
+    <center>
+    <h1 style="color: red">Login</h1>
+    <form name="loginform">
+
+    <input type="text" name="username" placeholder="Username" />
+   <p id=uname style="font-size: 15px;color:red"></p>
+    <input type="password" name="password" placeholder="Password" />
+    <p id=pass style="font-size: 15px;color:red"></p>
+     <input type="button" onclick="submitFunction()" name="LogIn" value="LogIn" />
+     <p id=user style="font-size: 15px;color:red"></p>
+    </center>
+  </div>
+  
+ 
+ 
+  
+  
+</body>
+</html>
