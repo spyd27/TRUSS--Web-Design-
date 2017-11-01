@@ -1,3 +1,3 @@
 <?php
-echo "this is server";
+echo "Server returns ".$_POST["username"]." ".$_POST["password"];
 ?>
